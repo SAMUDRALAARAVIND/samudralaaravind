@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Data Structure</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<style>
+	.header{
+		border-style:solid;
+		border-bottom-color:green;
+		border-bottom-width:5px;
+		background-color:tomato;
+		padding-top:50px ;
+		padding-bottom:25px;
+		text-align: center;
+
+	}
+    .footer{
+    	background-color:gray;
+    	color: white;
+    	border-style:solid;
+    	border-color:#e7e7e7;
+    	border-width:3px 3px 3px 3px;
+
+
+    }
+    .link{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .linked:hover{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .topic:hover{
+    	color:rgb(0,255,0);
+    	
+    }
+    p.impact {
+  font-family: Impact, Charcoal, sans-serif;
+}
+   
+	</style>
+</head>
+<body>
+	<div class="container-fluid"><!--header starting-->
+		<header class="header"><h4>Data Structures & Algorithms</h4></header>
+	</div><!--header ending-->
+	<nav></nav>
+	<hr>
+	<div class="container row"><!--body starting-->
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<h3>Array Data Structure</h3>
+      <p>An <b>Array</b> Data Structure is a collection of homogenious(same type) data items stored in contiguous(continuous) block of memory.</p>
+      <hr>
+      <p><b >int </b>arr[7]={233,14,23,19,-26,-254,38};<br>
+        <img src="images/addresses.png" class="img-responsive"><br>
+      The above statement is creation of an <b>integer</b> type array of 7 elements.The addresses of the elements started from 50(these values may vary for each execution) ,ended at 74.That means the elements in that array are stored in a contiguous block of memory.Each element of an array is indexed starting from zero.In the above case it's <b>0-6</b></p>
+      <p>We can access any element of an array by using index of that element.<br>
+        <b>arr[0]</b>  will give 233<br>
+        <b>arr[1]</b>  will give 14<br>
+        <b>arr[2]</b>  will give 23<br>
+        <b>arr[3]</b>  will give 19<br> and so on..<br>
+       one more way to access the elements of an array is by using pointers.We know that the name of the array is itself the address of first element in the array.</p>
+        <b>*(arr+0)</b>       will give 233<br>
+        <b>*(arr+1)</b>  will give 14<br>
+        <b>*(arr+2)</b>  will give 23<br>
+        <b>*(arr+3)</b>  will give 19<br> and so on..<br>
+        <h3>Basic Operations In Array:</h3>
+        <ul>
+          <li><b>Traversal</b></li>
+          <li><b>Insertion</b></li>
+          <li><b>Deletion</b></li>
+          <li><b>Search</b></li>
+          <li><b>Update</b></li>
+        </ul>
+        <h4>1.Array Traversal</h4>
+        <p>Traversing an array is printing all the values of that array.
+          <div class="container" style="background-color:#e7e7e7;">
+             <b>#include&lt;iostream&gt;</b><br>
+             <b>using namespace std;</b><br><!--<span style="padding-left:8px;">-->
+             <b>int</b>main(){<br>
+             <span style="padding-left:15px;"><b>int</b> i,arr[5]={23,54,87,96,1};</span><br>
+             <span style="padding-left:15px;"><b>for</b>(i=0,i<5;i++){</span><br>
+             <span style="padding-left:15px;"><b>cout</b>&lt;&lt;arr[i]&lt;&lt;" ";</span><br>
+             <span style="padding-left:15px;">}</span><br>
+             <span style="padding-left:15px;"><b>return 0;</b></span><br> 
+            }<br>
+            
+          </div>
+
+    </div>
+			
+		</div>
+	</div><!--body ending-->
+	<div class="container-fluid footer row">  <!--footer-->
+  		<div class="col-sm-5">
+  			<a href="index.html" class="link linked"><h2>c o ss i n e.com</h2></a><br>
+  			<i class="fa fa-copyright"></i>2020-
+  		</div>
+  		<div class="col-sm-2">
+  			<h4>Company</h4>
+  			<a href="%" class="link linked">About Us</a><br><br>
+  			<a href="%" class="link linked">Home</a><br><br>
+  			<a href="%" class="link linked">Contact Us</a><br><br>
+  			<a href="%" class="link linked">Tutorials</a><br><br>
+  		</div>
+  		<div class="col-sm-5"></div>
+  	</div> <!--footer ending-->
+
+</body>
+</html>

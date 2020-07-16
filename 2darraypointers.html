@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2D array vs Pointers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<style>
+  .header{
+		border-style:solid;
+		border-bottom-color:green;
+		border-bottom-width:5px;
+		background-color:white;
+		color:green;
+		padding-top:30px ;
+		padding-bottom:15px;
+		text-align: left;
+
+	}
+    .footer{
+    	background-color:rgb(100,100,100);
+    	color: white;
+    	border-style:solid;
+    	border-color:green;
+    	border-width:1px 1px 1px 1px;
+    	padding:20px 20px 20px 20px;
+    	float:center;
+    	text-align:center;
+
+
+    }
+    .link{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .linked:hover{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .code-comment{
+        color:rgb(145,145,145);
+    }
+    .topic:hover{
+    	color:white;
+    	background-color: gray;
+    	
+    }
+    P.
+    .keft{
+    	color:green;
+    	text-align:left;
+    }
+    .right{
+    	color:green;
+    	text-align: right;
+    }
+    .na:hover{
+    	color:black;
+    	background-color: white;
+    }
+    .left-navigation{
+    	width:200px;
+    	height:490px;
+    	overflow-y: auto;
+    	overflow-x: fixed;
+    }
+    p.a{
+    	font-family: Georgia, serif;
+        font-size:large;
+    }
+    .code{
+    	width:100%;
+    	height:200px;
+    	overflow-x:auto;
+    	overflow-y:auto;
+    	color:green;
+    	background-color: rgb(230,230,230);
+    	padding-left:15px;
+    	border-left-style:solid;
+    	border-left-color:green;
+    	border-left-width: 5px;
+
+    }
+    .indent-code{
+    	text-indent:15px;
+    }
+    .wel{
+    	background-color:rgb(252,204,204);
+    	padding:4px 4px 7px 4px;
+    }
+    .img{
+        background-color:#e7e7e7;
+    }
+    .code-statement{
+        width:100%;
+        height:50px;
+        overflow-x:auto;
+        overflow-y:fixed;
+    }
+    .na:hover{
+     color:white;
+     background-color: rgb(170,170,170);
+    }
+</style>
+<body>
+	<div class="container-fluid header" style="padding-bottom: 10px;">
+       <h2><a href="index.html"><img src="images/logo.png" class="rounded" height="60px" width="200px"></a></h2>
+       <p>Best platform for competative programming</p>
+    </div><br><br>
+    <div class="container-fluid row">
+        <div class="col-lg-2">
+            <div class="dropdown">
+               <button class="btn btn-light btn-outline-success na" type="button" data-toggle="dropdown">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify text-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu left-navigation"style="background-color: #e7e7e7;">
+                   <li class="dropdown-header"><h5><b>1.  C/C++ pointers</b></h5></li>
+                   <li><a href="index.html" class="btn btn-block  topic">Introduction</a></li>
+                   <li><a href="#" class="btn btn-block topic">Pointer to Pointer</a></li>
+                   <li><a href="#" class="btn btn-block topic">1D array Vs Pointers</a></li>
+                   <li><a href="2darraypointers.html" class="btn btn-block bg-success topic">2D array Vs pointers</a></li>
+                   <li><a href="#" class="btn btn-block topic">Functions Vs Pointers</a></li>
+                   <li class="dropdown-header"><h5><b>2.Data Structures</b></h5></li>
+                   <li class="dropdown-header"><h5><b>Arrays</b></h5></li>
+              </ul>
+           </div>
+        </div>
+        <div class="col-lg-7">
+            <h3 style="text-align: center;">2D arrays Vs Pointers:</h3>
+            <p class="a">In the previous chapter we learnt that the name of a 1D array is itself the address of first element of that array.What will be the answer in case of 2D array,3D array...Multi dimensional array??.
+             you will find the answer for this in this chapter.
+            </p>
+            <p class="a">before getting into this chapter lets analyse anexample below</p>
+            <div class="code">
+                <p class="a">#include&lt;iostream&gt;<br>
+                    using namespace std;<br>
+                    int main()<br>
+                    {<br>
+                        int a[5]={23,44,32,67,-78};<span class="code-comment">/*declaring a container of memory 20 bytes/*</span><br>
+                        cout&lt;&lt;a&lt;&lt;" and "&lt;&lt;a+1&lt;&lt;endl;<br>
+                        cout&lt;&lt;&a&lt;&lt;" and "&lt;&lt;&a+1&lt;&lt;endl;<br>
+                        cout&lt;&lt;*&a;<br>
+                        return 0;<br>
+
+                    }<br></p>
+            </div><br><br>
+            <div class="wel">
+                <b>output:</b><br>
+                0x6ffe10 and 0x6ffe14<br>
+                0x6ffe10  and   0x6ffe1c<br>
+                0x6ffe10<br>
+           </div><br><br>
+           <strong>0x6ffe14-0x6ffe10=4<br>
+           0x6ffe1c- 0x6ffe10=20<br></strong>
+           <p class="a">Explanation of above code is as follows:</p>
+           <div class="jumbotron"><h5>Explanation:</h5><p class="a">In the above code it's very clear that the name of the array <b>a</b> is pointing to an <b>integer</b> at 0<sup>th</sup> index. that's why when we add 1 to <b>a</b> we are shifted by size of int(4 bytes),whereas <b>&a</b> is ponting to the <b>whole array</b> that's why when we add 1 to <b>&a</b> we are shifted by size of the array(20 bytes). </p><p class="a">The third line in our output tells that <strong>dereferecing a ponter to array</strong> will give us <strong>pointer to integer</strong> of first index.</p></div>
+           <h5>Pointer to 2-D array:</h5>
+           <p class="a">In a two dimensional array, we can access each element by using two indices, where first index represents the row number and second index represents the column number. The elements of 2-D array can be accessed with the help of pointer notation also. Suppose arr is a 2-D array, we can access any element arr[i][j] of the array using the pointer expression <b>*(*(arr + i) + j)</b>. Now we’ll see how this expression can be derived.
+           Let us take a two dimensional array a[3][4]:</p>
+           <p class="a code-statement"><b>int</b> a[3][4]={  {33,44,23,-29} , {45,86,64,35}, {79,103,208,100}};</p>
+           <p class="a">Since memory in a computer is organized linearly it is not possible to store the 2-D array in rows and columns. The concept of rows and columns is only theoretical, actually, a 2-D array is stored in row-major order i.e rows are placed next to each other. The following figure shows how the above 2-D array will be stored in memory.
+           </p><img class="img-responsive" src="images/2darray.png"  height="240px" width="460px" alt="2-D array">
+           
+    </div>
+</body>
+</head>

@@ -1,117 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+	<title>Home page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>first web page</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<script src="js/bootstrap.js"></script>
 	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
 </head>
-<body class="container-fluid">
-	<h1>samudrala <small>aravind</small></h1>
-	<h2>samudrala <small>aravind</small></h2>
-	<p>hello world now the world word be <mark class="bg-warning">highlighted</mark></p>
-	<div class="container-fluid">
-	<dl>
-    <dt>Coffee</dt>
-    <dd>- black hot drink</dd>
-    <dt>Milk</dt>
-    <dd>- white cold drink</dd>
-  </dl>    
-  The following HTML elements:<code>span</code>,<br> <code>section</code>, and <code>div</code> defines a section in a documentkbd	
-   to copy some text use the shortcut   <kbd>ctrl+c</kbd>
-   <pre class="bg-warning">
-   	Text in a pre element
-is displayed in a fixed-width
-font, and it preserves
-both      spaces and
-line breaks.
- </pre>
-<div class="container">
-  
-   <p class="text-muted">this text is muted type</p>
-   <p class="text-warning">!this is a warning</p>
-   <p class="text-danger">!!Danger text this is</p>
-   <p class="text-primary">primary text</p>
-   <p class="text-secondary">secondary text</p>
-   <p class="text-info">information text</p>
-   <p class="text-success">this is successful text</p>
-</div>
- <div class="container-fluid">
- 	<p class="bg-primary">hello world</p>
-    <p class="bg-danger">hello world</p>
-    <p class="bg-info">hello world</p>
-    <p class="bg-warning">hello world</p>
- </div>
-    </div>
-    <p class="text-capitalize text-left">
-    	Text in a pre element
-is displayed in a fixed-width
-font, and it preserves
-both      spaces and
-line breaks.
-    </p>
-    <ul class="list-inline">
-    <li>Coffee</li>
-    <li>Tea</li>
-    <li>Milk</li>
-  </ul>
- <div class="table-responsive">
- 	<table  class="table table-striped table-bordered table-condensed table-hover">
- 		<tr>
- 		<th>
- 		first name	
- 		</th>
- 		<th>last name</th>
- 		<th>gmail</th>
- 	</tr>
- 	<tr>
- 		<td>samudrala</td>
- 		<td>aravind</td>
- 		<td>samudrala@gmail.com</td>
- 	</tr>
- 	<tr class="bg-danger">
- 	  <td >samudrala</td>
- 	  <td>swamy</td>
- 	  <td>swamy@gmail.com</td>
- 	</tr>
- 	</table>
- </div>
-    <div class="container-fluid">
-    	<h1>image is circular</h1>
-        <img src="images/myimage.jpg" class="img-circle img-responsive" style="boreder-radius=50%;" alt="samudrala aravind">
-       
+<style>
+	.header{
+		border-style:solid;
+		border-bottom-color:green;
+		border-bottom-width:5px;
+		background-color:white;
+		color:green;
+		padding-top:30px ;
+		padding-bottom:15px;
+		text-align: left;
+
+	}
+	.code-keys{
+		color:#0000ff;
+	}
+    .footer{
+    	background-color:rgb(100,100,100);
+    	color: white;
+    	border-style:solid;
+    	border-color:green;
+    	border-width:1px 1px 1px 1px;
+    	padding:20px 20px 20px 20px;
+    	float:center;
+    	text-align:center;
+
+
+    }
+    .link{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .linked:hover{
+    	color:white;
+    	text-decoration-style: none;
+    }
+    .topic:hover{
+    	color:white;
+    	background-color: gray;
+    	
+    }
+    
+    .keft{
+    	color:green;
+    	text-align:left;
+    }
+    .right{
+    	color:green;
+    	text-align: right;
+    }
+    .code-comment{
+    	color:rgb(145,145,145);
+    }
+    .na:hover{
+    	color:black;
+    	background-color: white;
+    }
+    .left-navigation{
+    	width:200px;
+    	height:490px;
+    	overflow-y: auto;
+    	overflow-x: fixed;
+    }
+    p.a{
+    	font-family: 'Mukta', sans-serif;
+        font-size:large;
+    }
+    .code{
+    	width:100%;
+    	height:200px;
+    	overflow-x:auto;
+    	overflow-y:auto;
+    	color:black;
+    	background-color: white;
+    	padding-left:15px;
+    	border-left-style:solid;
+    	border-left-color:green;
+    	border-left-width: 5px;
+    	font-family: 'Mukta', sans-serif;
+    	font-size:large;
+
+    }
+    .code-number{
+    	color:#990000;
+    }
+    .indent-code{
+    	text-indent:15px;
+    }
+    .wel{
+    	background-color:rgb(252,204,204);
+    	padding:4px 4px 7px 4px;
+    }
+	</style>
+<body>
+	<div class="container-fluid header" style="padding-bottom: 10px;">
+       <h2><a href="index.html"><img src="images/logo.png" class="rounded" height="60px" width="200px"></a></h2>
+       <p>Best platform for competative programming</p>
+	</div><br><br>
+	<div class="container-fluid row">
+		<div class="col-lg-2">
+			<div class="dropdown">
+               <button class="btn btn-secondary btn-outline-dark text-light" type="button" data-toggle="dropdown">
+               	<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu left-navigation"style="background-color: #e7e7e7;">
+              	   <li class="dropdown-header"><h5><b>1.  C/C++ pointers</b></h5></li>
+                   <li><a href="index.html" class="btn btn-block bg-success topic">Introduction</a></li>
+                   <li><a href="#" class="btn btn-block topic">Pointer to Pointer</a></li>
+                   <li><a href="1darraypointers.html" class="btn btn-block topic">1D array Vs Pointers</a></li>
+                   <li><a href="2darraypointers.html" class="btn btn-block topic">2D array Vs pointers</a></li>
+                   <li><a href="#" class="btn btn-block topic">Functions Vs Pointers</a></li>
+                   <li class="dropdown-header"><h5><b>2.Data Structures</b></h5></li>
+                   <li class="dropdown-header" style="color:tomato;"><b><h5>Arrays</h5></b></li>
+                   <li><a href="#" class="btn btn-block topic">Array rotations</a></li>
+                   <li><a href="#" class="btn btn-block topic">Searching</a></li>
+                   <li><a href="#" class="btn btn-block topic">Sorting Algorithms</a></li>
+                   <li><a href="#" class="btn btn-block topic">Dynamic arrays-1</a></li>
+                   <li><a href="#" class="btn btn-block topic">Dynamic arrays-2</a></li>
+
+                   <li class="dropdown-header" style="color:tomato;"><b><h5>Linked List</h5></b></li>
+              </ul>
+           </div>
+		</div>
+		<div class="col-lg-7">
+			<h3><b>Pointers Introduction:</b></h3>
+			<p class="a">Pointers are variables that stores addresses of variables .
+			i.e A Pointer to integer can store address of an <b>int</b>,Pointer to charecter can store address of a <b>char</b> variable.declaration of pointer variables are as follows:<br>
+		    <code><b>int*</b> ptr1;</code><br>
+		    <code><b>char*</b> ptr2;</code><br>
+		    <code><b>float*</b> ptr3;</code><br>
+		    In the above statements <code>ptr1</code> can store address of an integer variable,<code>ptr2</code> can store address of a char variable,<code>ptr3</code> can store address of a float variable,
+		    </p>
+		    <div class="jumbotron">
+		    	<p class="a">Note:</b>Even though address of any variable is an integer But we can not store them in <code>int</code>  type variable.</p>
+		    </div><hr>
+			<h4>Reference(&) and Dereference(*) operators:</h4>
+			<p class="a"><code><b>int</b> x=200;</code><br>
+				<code>cout&lt;&lt;&x;</code><span class="code-comment"><i> //will give you the address of 'x'</i></span><br>
+			In the above statement the variable <b>x</b> will be given 4 bytes of memory at some random location ,let it be 1000(address of <b>x</b>).To know the address of <b>x</b> we need a pointer to integer(<b>x</b> is of <code>int</code> type).<br>
+            <code><b>int*</b> ptr;</code><br>
+            now  the variable <b>ptr</b> can hold the address of any data of type  <code>int</code>.<br>
+            ptr=&x;<br>
+            To get the value at a location we use dereference(*) oprator.i.e <code><b>int</b> value=*(address);</code>
+            </p>
+            <p class="a">we can also declare a pointer as <code>int *y;</code>,And we can declare both variable and pointer to variable in single statement as..<code>int x,*y;</code> Here <b>x</b> is <b>int</b> variable and <b>y</b> is pointer to <b>int</b> variable.</p>
+<pre class="code">
+<span class="code-keys">#include&lt;iostream&gt;
+using namespace std;
+int</span> main(){
+    <span class="code-keys">int</span> x=<span class="code-number">200</span>;
+    <span class="code-keys">int*</span> y=&x; <span class="code-comment">//assigning address of x to pointer variable.</span>
+    cout&lt;&lt;"value at address "&lt;&lt;y&lt;&lt;" is: "*y&lt;&lt;endl;
+    <span class="code-keys">return</span> <span class="code-number">0</span>;
+}
+</pre>
+            
+            <br><hr>
+            <div class="wel">
+            	<b>Output:</b>
+            	<p>value at address <b>0x6ffe14</b> is: 200</p>
+            </div>
+            <p class="a">The number <b>0x6ffe14</b> is in hexadecimal form, in decimal form it is<b>7339540</b>.In your computer the value may not be the same.</p>
+            <div class="jumbotron">
+            	<p class="a"><h5>Do You Know?</h5><br>
+            	All variables and statements of a program will be stored in our computer's RAM,each address will represent a <b>single byte</b> of memory.Let's say if our computer has <b>2GB</b> RAM ,then there will be <b>2*1024*1024*1024</b> memory addresses.After compleation of our Program all the data will be deleted except the data that is stored in the heap section(dynamically allocated memory).</p>
+            </div><hr>
+            <h4>Operations on Pointers:</h4>
+            <p class="a">We know that typically an <code>int</code> type variable requires 4 bytes of memory(depends on type of compiler).If address of a variable of <code>int</code> type is <b>0x6ffe14</b>,when we add <b>1</b> to this address result will be <b>0x6ffe18</b> <del>but not <b>0x6ffe15</b></del>.</p>
+<pre class="code">
+<span class="code-keys">#include&lt;iostream&gt;
+using namespace std;
+int</span> main(){
+    <span class="code-keys">int</span> x=<span class="code-number">200</span>;
+    <span class="code-keys">int*</span> y=&x;
+    cout&lt;&lt;" address of x is: "&lt;&lt;y&lt;&lt;endl;
+    y++;
+    cout&lt;&lt;"address next to x is: "&lt;&lt;y&lt;&lt;endl;
+    <span class="code-keys">return</span> <span class="code-number">0</span>;
+}
+</pre>
+            <br><hr>
+            <div class="wel">
+            	<b>output:</b><br>
+            	<p class="a">address of x is: 0x6ffe08</p>
+            	<p class="a">address next to x is: 0x6ffe0c</p>
+
+            </div>
+            <b>0x6ffe0c-0x6ffe08=4</b>
+         </div>
+         <br><br><br>
+         <div class="container-fluid footer">
+	        <a href="index.html"><img src="images/logo.png" width="90px" height="80px" class="img-responsive" alt="Logo"></a><br>
+	         <a href="%" class="link linked">Home</a><br>
+	        <a href="%" class="link linked">About Us</a><br>
+	         <a href="%"  class="link linked">Contact Us</a><br>
+
+          </div>
 	</div>
-	<i>samudrala aravind</i>
-	<div class="container jumbotron bg-info table-bordered table-striped">
-		<h1>hello this is jumbotroon</h1>
-		<p class="text-info">this is a paragraph in jumboton</p>
-		<table class="table table-hover">
-			<tr>
-				<th>first name</th>
-				<th>last name</th>
-				<th>gmail</th>
-			</tr>
-			<tr>
-				<td>samudrala </td>
-				<td>aravind</td>
-				<td>asamudrala@gmail.com</td>
-			</tr>
-			<tr>
-				<td>samudrala</td>
-				<td>swamy</td>
-				<td>samudrala@gmail.com</td>
-			</tr>
-		</table>
-	</div>
-	<div class=" container bg-danger">
-		<h1>this is a page <small>header</small></h1>
-		
-	</div>
-	<p>
-	this is some other text
-	written unde underline
-    </p>
+
 </body>
 </html>
